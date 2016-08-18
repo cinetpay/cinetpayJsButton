@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>CinetpayJsButton by cinetpay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">CinetpayJsButton</h1>
+      <h2 class="project-tagline">JavaScript integration for cinetpay&#39;s payment buttons</h2>
+      <a href="https://github.com/cinetpay/cinetpayJsButton" class="btn">View on GitHub</a>
+      <a href="https://github.com/cinetpay/cinetpayJsButton/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/cinetpay/cinetpayJsButton/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="cinetpay-payment-button" class="anchor" href="#cinetpay-payment-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CinetPay Payment Button</h1>
+
+<p>Bouton de Paiement CinetPay facile à integrer dans votre projet</p>
+
+<h2>
+<a id="utilisation-simple-et-rapide" class="anchor" href="#utilisation-simple-et-rapide" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Utilisation Simple et rapide</h2>
+
+<p>Parfait pour ceux qui utilisent les solutions basées sur l'API</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=VOTRE_API_KEY<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>buynow<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>VOTRE_SITE_SITE_ID<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>Il existe pour l'instant trois types de boutons : <code>buynow</code>, <code>paynow</code>, <code>donate</code>.</p>
+
+<h2>
+<a id="utilisation-du-bouton-cinetpay" class="anchor" href="#utilisation-du-bouton-cinetpay" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Utilisation du bouton CinetPay</h2>
+
+<p>Les scripts suivant creent un bouton cinetpay et un formulaire de paiement cinetpay pour vous</p>
+
+<h3>
+<a id="achetez-maintenant-buy-now" class="anchor" href="#achetez-maintenant-buy-now" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Achetez maintenant (Buy Now)</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=VOTRE_API_KEY<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>buynow<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>VOTRE_SITE_SITE_ID<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-designation</span>=<span class="pl-s"><span class="pl-pds">"</span>DESIGNATION_DU_PRODUIT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-amount</span>=<span class="pl-s"><span class="pl-pds">"</span>MONTANT_DU_PRODUIT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-trans</span>_id=<span class="pl-s"><span class="pl-pds">"</span>ID_TRANSACTION<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-payment</span>_config=<span class="pl-s"><span class="pl-pds">"</span>SINGLE<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-page</span>_action=<span class="pl-s"><span class="pl-pds">"</span>PAYMENT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-version</span>=<span class="pl-s"><span class="pl-pds">"</span>V1<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-currency</span>=<span class="pl-s"><span class="pl-pds">"</span>CFA<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-language</span>=<span class="pl-s"><span class="pl-pds">"</span>fr<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-custom</span>=<span class="pl-s"><span class="pl-pds">"</span>CUSTOM<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-golive</span>=<span class="pl-s"><span class="pl-pds">"</span>PLATFORM<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-callback</span>=<span class="pl-s"><span class="pl-pds">"</span>PAGE_IPN<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-return</span>_page=<span class="pl-s"><span class="pl-pds">"</span>PAGE_RETOUR<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-cancel</span>_page=<span class="pl-s"><span class="pl-pds">"</span>PAGE_ANNULATION<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>Exemple : en TEST :</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>buynow<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-designation</span>=<span class="pl-s"><span class="pl-pds">"</span>Achat de mangue<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-amount</span>=<span class="pl-s"><span class="pl-pds">"</span>50<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-trans</span>_id=<span class="pl-s"><span class="pl-pds">"</span>5685968<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-payment</span>_config=<span class="pl-s"><span class="pl-pds">"</span>SINGLE<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-page</span>_action=<span class="pl-s"><span class="pl-pds">"</span>PAYMENT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-version</span>=<span class="pl-s"><span class="pl-pds">"</span>V1<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-currency</span>=<span class="pl-s"><span class="pl-pds">"</span>CFA<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-language</span>=<span class="pl-s"><span class="pl-pds">"</span>fr<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-custom</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>393509<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-golive</span>=<span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-callback</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/notify/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-return</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/return/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-cancel</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/cancel/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>En PROD :</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>buynow<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-designation</span>=<span class="pl-s"><span class="pl-pds">"</span>Achat de mangue<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-amount</span>=<span class="pl-s"><span class="pl-pds">"</span>50<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-trans</span>_id=<span class="pl-s"><span class="pl-pds">"</span>5685968<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-payment</span>_config=<span class="pl-s"><span class="pl-pds">"</span>SINGLE<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-page</span>_action=<span class="pl-s"><span class="pl-pds">"</span>PAYMENT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-version</span>=<span class="pl-s"><span class="pl-pds">"</span>V1<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-currency</span>=<span class="pl-s"><span class="pl-pds">"</span>CFA<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-language</span>=<span class="pl-s"><span class="pl-pds">"</span>fr<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-custom</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>393509<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-golive</span>=<span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-callback</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/notify/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-return</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/return/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-cancel</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/cancel/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h3>
+<a id="payez-maintenant-pay-now" class="anchor" href="#payez-maintenant-pay-now" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Payez Maintenant (pay now)</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=VOTRE_API_KEY<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>paynow<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>VOTRE_SITE_SITE_ID<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-designation</span>=<span class="pl-s"><span class="pl-pds">"</span>DESIGNATION_DU_PRODUIT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-amount</span>=<span class="pl-s"><span class="pl-pds">"</span>MONTANT_DU_PRODUIT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-trans</span>_id=<span class="pl-s"><span class="pl-pds">"</span>ID_TRANSACTION<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-payment</span>_config=<span class="pl-s"><span class="pl-pds">"</span>SINGLE<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-page</span>_action=<span class="pl-s"><span class="pl-pds">"</span>PAYMENT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-version</span>=<span class="pl-s"><span class="pl-pds">"</span>V1<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-currency</span>=<span class="pl-s"><span class="pl-pds">"</span>CFA<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-language</span>=<span class="pl-s"><span class="pl-pds">"</span>fr<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-custom</span>=<span class="pl-s"><span class="pl-pds">"</span>CUSTOM<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-golive</span>=<span class="pl-s"><span class="pl-pds">"</span>PLATFORM<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-callback</span>=<span class="pl-s"><span class="pl-pds">"</span>PAGE_IPN<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-return</span>_page=<span class="pl-s"><span class="pl-pds">"</span>PAGE_RETOUR<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-cancel</span>_page=<span class="pl-s"><span class="pl-pds">"</span>PAGE_ANNULATION<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>Exemple : en TEST :</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>paynow<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-designation</span>=<span class="pl-s"><span class="pl-pds">"</span>Achat de mangue<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-amount</span>=<span class="pl-s"><span class="pl-pds">"</span>50<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-trans</span>_id=<span class="pl-s"><span class="pl-pds">"</span>5685968<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-payment</span>_config=<span class="pl-s"><span class="pl-pds">"</span>SINGLE<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-page</span>_action=<span class="pl-s"><span class="pl-pds">"</span>PAYMENT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-version</span>=<span class="pl-s"><span class="pl-pds">"</span>V1<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-currency</span>=<span class="pl-s"><span class="pl-pds">"</span>CFA<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-language</span>=<span class="pl-s"><span class="pl-pds">"</span>fr<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-custom</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>393509<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-golive</span>=<span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-callback</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/notify/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-return</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/return/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-cancel</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/cancel/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>En PROD :</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>paynow<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-designation</span>=<span class="pl-s"><span class="pl-pds">"</span>Achat de mangue<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-amount</span>=<span class="pl-s"><span class="pl-pds">"</span>50<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-trans</span>_id=<span class="pl-s"><span class="pl-pds">"</span>5685968<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-payment</span>_config=<span class="pl-s"><span class="pl-pds">"</span>SINGLE<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-page</span>_action=<span class="pl-s"><span class="pl-pds">"</span>PAYMENT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-version</span>=<span class="pl-s"><span class="pl-pds">"</span>V1<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-currency</span>=<span class="pl-s"><span class="pl-pds">"</span>CFA<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-language</span>=<span class="pl-s"><span class="pl-pds">"</span>fr<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-custom</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>393509<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-golive</span>=<span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-callback</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/notify/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-return</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/return/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-cancel</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/cancel/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h3>
+<a id="don-donations" class="anchor" href="#don-donations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Don (Donations)</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=VOTRE_API_KEY<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>donate<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>VOTRE_SITE_SITE_ID<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-designation</span>=<span class="pl-s"><span class="pl-pds">"</span>DESIGNATION_DU_PRODUIT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-amount</span>=<span class="pl-s"><span class="pl-pds">"</span>MONTANT_DU_PRODUIT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-trans</span>_id=<span class="pl-s"><span class="pl-pds">"</span>ID_TRANSACTION<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-payment</span>_config=<span class="pl-s"><span class="pl-pds">"</span>SINGLE<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-page</span>_action=<span class="pl-s"><span class="pl-pds">"</span>PAYMENT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-version</span>=<span class="pl-s"><span class="pl-pds">"</span>V1<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-currency</span>=<span class="pl-s"><span class="pl-pds">"</span>CFA<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-language</span>=<span class="pl-s"><span class="pl-pds">"</span>fr<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-custom</span>=<span class="pl-s"><span class="pl-pds">"</span>CUSTOM<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-golive</span>=<span class="pl-s"><span class="pl-pds">"</span>PLATFORM<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-callback</span>=<span class="pl-s"><span class="pl-pds">"</span>PAGE_IPN<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-return</span>_page=<span class="pl-s"><span class="pl-pds">"</span>PAGE_RETOUR<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-cancel</span>_page=<span class="pl-s"><span class="pl-pds">"</span>PAGE_ANNULATION<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>Exemple : en TEST :</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>donate<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-designation</span>=<span class="pl-s"><span class="pl-pds">"</span>Achat de mangue<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-amount</span>=<span class="pl-s"><span class="pl-pds">"</span>50<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-trans</span>_id=<span class="pl-s"><span class="pl-pds">"</span>5685968<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-payment</span>_config=<span class="pl-s"><span class="pl-pds">"</span>SINGLE<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-page</span>_action=<span class="pl-s"><span class="pl-pds">"</span>PAYMENT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-version</span>=<span class="pl-s"><span class="pl-pds">"</span>V1<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-currency</span>=<span class="pl-s"><span class="pl-pds">"</span>CFA<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-language</span>=<span class="pl-s"><span class="pl-pds">"</span>fr<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-custom</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>393509<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-golive</span>=<span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-callback</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/notify/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-return</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/return/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-cancel</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/cancel/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>En PROD :</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-button</span>=<span class="pl-s"><span class="pl-pds">"</span>donate<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-designation</span>=<span class="pl-s"><span class="pl-pds">"</span>Achat de mangue<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-amount</span>=<span class="pl-s"><span class="pl-pds">"</span>50<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-trans</span>_id=<span class="pl-s"><span class="pl-pds">"</span>5685968<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-payment</span>_config=<span class="pl-s"><span class="pl-pds">"</span>SINGLE<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-page</span>_action=<span class="pl-s"><span class="pl-pds">"</span>PAYMENT<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-version</span>=<span class="pl-s"><span class="pl-pds">"</span>V1<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-currency</span>=<span class="pl-s"><span class="pl-pds">"</span>CFA<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-language</span>=<span class="pl-s"><span class="pl-pds">"</span>fr<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-custom</span>=<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-site</span>_id=<span class="pl-s"><span class="pl-pds">"</span>393509<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-golive</span>=<span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-callback</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/notify/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-return</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/return/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">data-cancel</span>_page=<span class="pl-s"><span class="pl-pds">"</span>http://mondomaine.ci/cancel/<span class="pl-pds">"</span></span></span>
+<span class="pl-s1">        <span class="pl-e">async</span></span>
+<span class="pl-s1">&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h2>
+<a id="fonctionnalité-de-cinetpay-js-button" class="anchor" href="#fonctionnalit%C3%A9-de-cinetpay-js-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fonctionnalité de CinetPay Js Button</h2>
+
+<h3>
+<a id="data-variables" class="anchor" href="#data-variables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data variables</h3>
+
+<ul>
+<li>
+<code>data-button</code> Type de bouton</li>
+<li>
+<code>data-designation</code> Designation du produit</li>
+<li>
+<code>data-amount</code> Montant du paiement</li>
+<li>
+<code>data-trans_id</code> Id de la transaction, unique</li>
+<li>
+<code>data-payment_config</code> constante cinetpay, à ne pas changer</li>
+<li>
+<code>data-page_action</code> constante cinetpay, à ne pas changer</li>
+<li>
+<code>data-version</code> constante cinetpay, à ne pas changer</li>
+<li>
+<code>data-currency</code> constante cinetpay, à ne pas changer</li>
+<li>
+<code>data-language</code> constante cinetpay, à ne pas changer</li>
+<li>
+<code>data-custom</code> valeur que cinetpay vous retourne</li>
+<li>
+<code>data-site_id</code> votre site ID</li>
+<li>
+<code>data-golive</code> paramètre plateforme : yes pour la PROD et no pour la TEST</li>
+<li>
+<code>data-callback</code> lien IPN</li>
+<li>
+<code>data-return_page</code> lien de retour</li>
+<li>
+<code>data-cancel_page</code> lien d'annulation</li>
+</ul>
+
+<h2>
+<a id="navigateurs-supportés" class="anchor" href="#navigateurs-support%C3%A9s" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Navigateurs supportés</h2>
+
+<p>le bouton javascript a été testé et fonctionne sur tous les navigateurs modernes y compris :</p>
+
+<ul>
+<li>Chrome</li>
+<li>Safari</li>
+<li>Firefox</li>
+<li>Internet Explorer 8+.</li>
+</ul>
+
+<h2>
+<a id="votre-api-key-et-site-id" class="anchor" href="#votre-api-key-et-site-id" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Votre Api Key et Site ID</h2>
+
+<p>Ces informations sont disponibles dans votre BackOffice CinetPay.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/cinetpay/cinetpayJsButton">CinetpayJsButton</a> is maintained by <a href="https://github.com/cinetpay">cinetpay</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
