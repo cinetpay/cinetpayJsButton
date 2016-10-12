@@ -7,7 +7,7 @@ Bouton de Paiement CinetPay facile à integrer dans votre projet
 Parfait pour ceux qui utilisent les solutions basées sur l'API
 
 ```html
-<script src="/dist/cinetpay-button.js?apikey=VOTRE_API_KEY"
+<script src="/dist/v1/cinetpay-button.js?apikey=VOTRE_API_KEY"
         data-button="buynow"
         data-site_id="VOTRE_SITE_SITE_ID"
         async
@@ -24,7 +24,7 @@ Les scripts suivant creent un bouton cinetpay et un formulaire de paiement cinet
 ### Achetez maintenant (Buy Now)
 
 ```html
-<script src="/dist/cinetpay-button.js?apikey=VOTRE_API_KEY"
+<script src="/dist/v1/cinetpay-button.js?apikey=VOTRE_API_KEY"
         data-button="buynow"
         data-site_id="VOTRE_SITE_SITE_ID"
         data-designation="DESIGNATION_DU_PRODUIT"
@@ -36,7 +36,7 @@ Les scripts suivant creent un bouton cinetpay et un formulaire de paiement cinet
         data-currency="CFA"
         data-language="fr"
         data-custom="CUSTOM"
-        data-golive="PLATFORM"
+        data-golive="yes or no"
         data-callback="PAGE_IPN"
         data-return_page="PAGE_RETOUR"
         data-cancel_page="PAGE_ANNULATION"
@@ -45,14 +45,14 @@ Les scripts suivant creent un bouton cinetpay et un formulaire de paiement cinet
 ```
 Exemple : en TEST :
 ```html
-<script src="/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
+<script src="/dist/v2/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
         data-button="buynow"
         data-designation="Achat de mangue"
         data-amount="50"
         data-trans_id="5685968"
         data-payment_config="SINGLE"
         data-page_action="PAYMENT"
-        data-version="V1"
+        data-version="V2"
         data-currency="CFA"
         data-language="fr"
         data-custom=""
@@ -66,7 +66,7 @@ Exemple : en TEST :
 ```
 En PROD :
 ```html
-<script src="/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
+<script src="/dist/v1/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
         data-button="buynow"
         data-designation="Achat de mangue"
         data-amount="50"
@@ -89,7 +89,7 @@ En PROD :
 ### Payez Maintenant (pay now)
 
 ```html
-<script src="/dist/cinetpay-button.js?apikey=VOTRE_API_KEY"
+<script src="/dist/v1/cinetpay-button.js?apikey=VOTRE_API_KEY"
         data-button="paynow"
         data-site_id="VOTRE_SITE_SITE_ID"
         data-designation="DESIGNATION_DU_PRODUIT"
@@ -101,7 +101,7 @@ En PROD :
         data-currency="CFA"
         data-language="fr"
         data-custom="CUSTOM"
-        data-golive="PLATFORM"
+        data-golive="yes or no"
         data-callback="PAGE_IPN"
         data-return_page="PAGE_RETOUR"
         data-cancel_page="PAGE_ANNULATION"
@@ -110,14 +110,14 @@ En PROD :
 ```
 Exemple : en TEST :
 ```html
-<script src="/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
+<script src="/dist/v2/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
         data-button="paynow"
         data-designation="Achat de mangue"
         data-amount="50"
         data-trans_id="5685968"
         data-payment_config="SINGLE"
         data-page_action="PAYMENT"
-        data-version="V1"
+        data-version="V2"
         data-currency="CFA"
         data-language="fr"
         data-custom=""
@@ -131,14 +131,14 @@ Exemple : en TEST :
 ```
 En PROD :
 ```html
-<script src="/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
+<script src="/dist/v2/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
         data-button="paynow"
         data-designation="Achat de mangue"
         data-amount="50"
         data-trans_id="5685968"
         data-payment_config="SINGLE"
         data-page_action="PAYMENT"
-        data-version="V1"
+        data-version="V2"
         data-currency="CFA"
         data-language="fr"
         data-custom=""
@@ -155,7 +155,7 @@ En PROD :
 ### Don (Donations)
 
 ```html
-<script src="/dist/cinetpay-button.js?apikey=VOTRE_API_KEY"
+<script src="/dist/v1/cinetpay-button.js?apikey=VOTRE_API_KEY"
         data-button="donate"
         data-site_id="VOTRE_SITE_SITE_ID"
         data-designation="DESIGNATION_DU_PRODUIT"
@@ -167,7 +167,7 @@ En PROD :
         data-currency="CFA"
         data-language="fr"
         data-custom="CUSTOM"
-        data-golive="PLATFORM"
+        data-golive="yes or no"
         data-callback="PAGE_IPN"
         data-return_page="PAGE_RETOUR"
         data-cancel_page="PAGE_ANNULATION"
@@ -176,14 +176,14 @@ En PROD :
 ```
 Exemple : en TEST :
 ```html
-<script src="/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
+<script src="/dist/v2/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
         data-button="donate"
         data-designation="Achat de mangue"
         data-amount="50"
         data-trans_id="5685968"
         data-payment_config="SINGLE"
         data-page_action="PAYMENT"
-        data-version="V1"
+        data-version="V2"
         data-currency="CFA"
         data-language="fr"
         data-custom=""
@@ -197,7 +197,7 @@ Exemple : en TEST :
 ```
 En PROD :
 ```html
-<script src="/dist/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
+<script src="/dist/v1/cinetpay-button.js?apikey=174323661757617531bf99c9.80613927"
         data-button="donate"
         data-designation="Achat de mangue"
         data-amount="50"
@@ -238,7 +238,7 @@ En PROD :
 * `data-cancel_page` lien d'annulation
 
 
-## Navigateurs supportés
+## Navigateurs supporté
 
 le bouton javascript a été testé et fonctionne sur tous les navigateurs modernes y compris :
 
